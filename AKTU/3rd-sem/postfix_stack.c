@@ -7,6 +7,8 @@ struct stack
 	struct stack *link;
 }*top=NULL;
 
+// Function to push the element in the stack
+
 void push(char element)
 {
 	struct stack *temp;
@@ -22,6 +24,11 @@ void push(char element)
 		top = temp;
 	}
 }
+
+//End
+
+//Function to pop the element from the stack
+
 char pop()
 {
 	if(top == NULL)
@@ -38,6 +45,11 @@ char pop()
 		return  data;
 	}
 }
+
+//End
+
+// Function to get fist element from stack
+
 char getFirstEle()
 {
 	if(top == NULL)
@@ -51,6 +63,11 @@ char getFirstEle()
 		return  data;
 	}
 }
+
+//End
+
+// This is for the giving the prifrence order
+
 int getPri(char ch)
 {
 	if (ch == '(')
@@ -82,6 +99,11 @@ int getPri(char ch)
 		return 1;
 	}
 }
+
+//End
+
+// Function to convert the exp. in post fix notation
+
 int getPostFix(char exp[])
 {
 	char exp_post[100];
@@ -172,6 +194,11 @@ int getPostFix(char exp[])
 	}
 	printf("Postifx Notaion is %s",exp_post);
 }
+
+//End
+
+// Main function
+
 int main()
 {
 	char exp[100];
@@ -182,3 +209,4 @@ int main()
 	printf("\n\n\n");
 	return  0;
 }
+//End
